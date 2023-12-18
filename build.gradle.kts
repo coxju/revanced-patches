@@ -5,7 +5,7 @@ plugins {
     `maven-publish`
 }
 
-group = "your.org"
+group = "coxju.org"
 
 repositories {
     mavenCentral()
@@ -32,14 +32,14 @@ kotlin {
 
 tasks.withType(Jar::class) {
     manifest {
-        attributes["Name"] = "Your Patches"
+        attributes["Name"] = "Coxju's Patches"
         attributes["Description"] = "Patches for ReVanced."
         attributes["Version"] = version
         attributes["Timestamp"] = System.currentTimeMillis().toString()
-        attributes["Source"] = "git@github.com:you/revanced-patches.git"
-        attributes["Author"] = "You"
-        attributes["Contact"] = "contact@your.homepage"
-        attributes["Origin"] = "https://your.homepage"
+        attributes["Source"] = "git@github.com:coxju/revanced-patches.git"
+        attributes["Author"] = "coxju"
+        attributes["Contact"] = "coxju"
+        attributes["Origin"] = "#coxju"
         attributes["License"] = "GNU General Public License v3.0"
     }
 }
@@ -82,9 +82,9 @@ publishing {
             from(components["java"])
 
             pom {
-                name = "Your Patches"
+                name = "Coxju's Patches"
                 description = "Patches for ReVanced."
-                url = "https://your.homepage"
+                url = "#coxju"
 
                 licenses {
                     license {
@@ -94,15 +94,15 @@ publishing {
                 }
                 developers {
                     developer {
-                        id = "Your ID"
-                        name = "Your Name"
-                        email = "contact@your.homepage"
+                        id = "#"
+                        name = "Coxju"
+                        email = "coxju"
                     }
                 }
                 scm {
-                    connection = "scm:git:git://github.com/you/revanced-patches.git"
-                    developerConnection = "scm:git:git@github.com:you/revanced-patches.git"
-                    url = "https://github.com/you/revanced-patches"
+                    connection = "scm:git:git://github.com/coxju/revanced-patches.git"
+                    developerConnection = "scm:git:git@github.com:coxju/revanced-patches.git"
+                    url = "https://github.com/coxju/revanced-patches"
                 }
             }
         }
